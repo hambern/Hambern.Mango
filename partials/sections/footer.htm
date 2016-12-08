@@ -1,0 +1,34 @@
+description = "Footer"
+==
+<?php
+function onStart() {
+	$this['socials'] = ['facebook','twitter','github','google-plus'];
+}
+?>
+==
+<section id="footer" class="footer py-3 flex-items-xs-middle">
+	<div class="container text-xs-center">
+		<div class="row flex-items-xs-middle">
+			<div class="col-sm">
+				<p>
+					©{{ 'now'|date('Y') }} Boothack<br>
+					With images from<br />
+					<a href="https://unsplash.com">Unsplash.com</a>
+				</p>
+			</div>
+			<div class="col-sm">
+				<ul class="list-unstyled">
+					{% partial 'sections/main-menu' %}
+				</ul>
+			</div>
+			<div class="col-sm">
+				<p>
+					{% for social in socials %}
+					{% if loop.index0 %}&nbsp;{% endif %}
+					<i class="fa fa-{{ social }}-square fa-2x wow bounceIn" data-wow-delay=".{{ loop.index0 }}s"></i>
+					{% endfor %}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>

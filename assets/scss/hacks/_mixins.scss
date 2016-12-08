@@ -1,0 +1,44 @@
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o, $default: true) {
+  @if $vendors {
+    @each $vendor in $vendors { #{"-" + $vendor + "-" + $property}: #{$value}; }
+  }
+  @if $default {
+    #{$property}: #{$value};
+  }
+}
+
+@mixin hyphens() {
+  @include prefix(hyphens, auto);
+  @include prefix(word-break, normal);
+}
+
+@mixin background-tint($opacity: .5, $bg-from: $gray-dark, $bg-to: "", $direction: right bottom) {
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    @if $bg-to == "" { background: $bg-from; }
+    @else { background: linear-gradient(to $direction, $bg-from, $bg-to); }
+    opacity: $opacity;
+    z-index: -10000;
+  }
+}
+
+@mixin background-cover($url:"") {
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

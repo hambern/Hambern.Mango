@@ -1,0 +1,28 @@
+description = "Video"
+
+[viewBag]
+==
+<?php
+function onStart() {
+  $this['videos'] = ['a4tbhwMGSPQ','P1IySG_V7V0','ZZw_hFuKyUU'];
+}
+?>
+==
+<section id="{{ id|default('video') }}" class="py-3">
+  <div class="container">
+    {% if header %}
+    <h3 class="py-1">{{ header }}</h3>
+    {% endif %}
+    <div class="row">
+      {% for i, code in videos %}
+      {% if i % 3 == 0 %}
+    </div>
+    <div class="row">
+      {% endif %}
+      <div class="col-md py-1">
+        <div data-type="{{ type|default('youtube') }}" data-video-id="{{ code }}"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

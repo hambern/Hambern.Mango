@@ -1,0 +1,10 @@
+description = "Styles"
+
+[viewBag]
+==
+<link href="{{ [
+    'assets/scss/styles.scss',
+    'assets/bower_components/tether/dist/css/tether.css',
+    'assets/bower_components/animate.css/animate.css'
+    ]|theme }}" rel="stylesheet">
+{% styles %}

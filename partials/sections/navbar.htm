@@ -1,0 +1,18 @@
+description = "Navigation bar"
+
+[viewBag]
+==
+<section id="navbar">
+  <nav class="navbar navbar-light bg-faded">
+    <div class="container">
+      <a class="navbar-brand" href="/">Mango</a>
+      <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#main-menu"></button>
+      <div class="clearfix hidden-sm-up"></div>
+      <div class="collapse navbar-toggleable-xs" id="main-menu">
+        <ul class="nav navbar-nav float-sm-right">
+          {% partial 'sections/main-menu' %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>

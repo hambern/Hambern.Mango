@@ -1,0 +1,18 @@
+description = "Main menu"
+
+[viewBag]
+==
+<?php
+function onStart() {
+	$this['navs'] = [
+		['name' => 'Home', 'url' => '/'],
+		['name' => 'Tutorials', 'url' => '/tutorials'],
+	];
+}
+?>
+==
+{% for nav in navs %}
+<li class="nav-item {{ this.page.url == nav.url ? 'active' : '' }}">
+  <a class="nav-link" href="{{ nav.url }}">{{ nav.name }}</a>
+</li>
+{% endfor %}

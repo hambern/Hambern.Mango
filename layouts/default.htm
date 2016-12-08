@@ -1,0 +1,18 @@
+description = "Default layout"
+
+[Form]
+name = 1
+subject = 1
+==
+<!doctype html>
+<html lang="sv">
+{% partial 'parts/head' %}
+<body>
+{% partial 'sections/navbar' %}
+{% partial 'sections/jumbotron' %}
+<div id="page" class="page">
+    {% page %}
+</div>
+{% partial 'parts/foot' %}
+</body>
+</html>

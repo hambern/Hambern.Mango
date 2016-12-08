@@ -1,0 +1,27 @@
+title = "Welcome"
+url = "/"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[Form]
+name = 1
+phone = 0
+subject = 1
+==
+{% partial 'sections/benefits' %}
+{% partial 'sections/quote' quote = 'Design is more important than technology in most consumer applications' author = 'Dave McClure' %}
+{% partial 'sections/workers' %}
+
+<hr>
+<section class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2 class="py-1 text-danger"><i class="fa fa-comment-o"></i>&nbsp; {{ 'Contact us'|_ }}</h2>
+        {% component 'Form' %}
+      </div>
+    </div>
+  </div>
+</div>

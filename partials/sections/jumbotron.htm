@@ -1,0 +1,23 @@
+description = "Jumbotron"
+
+[viewBag]
+==
+<section id="jumbotron">
+  <div class="jumbotron {% placeholder jumbotron_type %} flex-items-xs-middle">
+    <div class="container py-2">
+      <div class="row">
+        <div class="offset-lg-2 col-lg-8 text-xs-center">
+          {% placeholder jumbotron default %}
+          <h1 class="display-4 mb-1">Mango</h1>
+          <p class="lead mb-1">
+            Mango is an October CMS theme with an scss-implementation of Bootstrap 4. This allows you to customize it directly from the backend through scss-variables and mixins
+          </p>
+          <p>
+            <a data-scroll href="#benefits" class="btn btn-primary btn-lg">What's in it?</a>
+          </p>
+          {% endplaceholder %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

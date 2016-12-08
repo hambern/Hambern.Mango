@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700');
+
+html, body {
+  @include font-smoothing();
+  @include hyphens();
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-root - 1;
+  }
+}
+
+hr {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5,
+.display-1, .display-2, .display-3, .display-4, .display-5 {
+  line-height: 1.1;
+}
+
+.flex-items-xs-middle {
+  display: flex;
+}
+
+.jumbotron {
+  color: $body-bg;
+  @include gradient-directional($color5, $color4, 135deg);
+  margin: 0;
+  min-height: $section-big;
+  &.small {
+    min-height: $section-small;
+  }
+}
+
+.footer {
+  min-height: $section-small;
+  background-color: $body-color;
+  color: $body-bg;
+  .nav-item {
+    .nav-link {
+      color: $body-bg;
+      opacity: .5;
+      &:hover {
+        opacity: .75;
+      }
+    }
+    &.active .nav-link {
+      opacity: 1;
+    }
+  }
+}
+
+.background-image {
+  @include background-cover();
+  @include background-tint(.6);
+  color: $body-bg;
+  min-height: $section-big;
+}

@@ -1,0 +1,23 @@
+title = "Tutorials"
+url = "/tutorials"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+{% put jumbotron %}
+  <h1 class="display-4 mb-1">Tutorials</h1>
+  <p class="lead mb-1">
+    October CMS, Scss and Bootstrap 4 makes it really easy and fast to achive the design you want.
+  </p>
+  <a data-scroll href="#video" class="btn btn-primary btn-lg">Show me how</a>
+{% endput %}
+
+{% partial 'sections/video' header = "Bootstrap 4" %}
+<hr>
+{% partial 'sections/video' id = "octobercms-video" header = "October CMS" videos = [79963873,97088926,154415433] type = "vimeo" %}
+{% partial 'sections/quote' quote = 'Try to learn something about everything and everything about something' author = 'Thomas Huxley' %}
+{% partial 'sections/video' id = "octobercms-video" header = "Making websites with October CMS" 
+  videos = ['3SmnExVW0Ag','TElafW6M7Q0','To2HbfQVxz4','FMKMZqALISI','O8f_MZS4E0I','iOt8_SkuEo4','qc4atYnHcPc','LwzHhE0hA_Y','uCR0VV6N5FE','OXgRSPfqxOU','m9AA59IVo-I','_STBANlmtoM','EKUX9ZGr3FU','xIpf218NTuI','aYTjfp4K8RE','PbCovQzsmYU','Ki8eRIdipKc','pXcfPeg81Io','8nMaNuOEaMI','2Fr3zKpMX7Q'] %}
+<hr>
+{% partial 'sections/video' id = "scss-video" header = "Scss" videos = ['pw1DeLy2Xsw'] %}

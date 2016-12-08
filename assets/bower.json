@@ -1,0 +1,28 @@
+{
+  "name": "vendor",
+  "authors": [
+    "Hambern <mejl@mattiashamberg.se>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    ""
+  ],
+  "dependencies": {
+    "bootstrap": "^4",
+    "animate.css": "^3",
+    "font-awesome": "^4",
+    "plyr": "^2",
+    "wow": "^1",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.6.0"
+  }
+}

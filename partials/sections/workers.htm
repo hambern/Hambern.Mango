@@ -1,0 +1,40 @@
+description = "Workers"
+
+[viewBag]
+==
+<?php
+function onStart() {
+  $this['workers'] = [
+    [
+      'name' => 'Karla Marx',
+      'role' => 'Creator',
+      'portrait' => 'assets/images/portrait-1.jpeg'],
+    [
+      'name' => 'Françoise Engels',
+      'role' => 'Evolver',
+      'portrait' => 'assets/images/portrait-1.jpeg'],
+    [
+      'name' => 'Robin Owen',
+      'role' => 'Destroyer',
+      'portrait' => 'assets/images/portrait-1.jpeg'],
+    [
+      'name' => 'Rosie Luxemburg',
+      'role' => 'Envoker',
+      'portrait' => 'assets/images/portrait-1.jpeg'],
+  ];
+}
+?>
+==
+<section id="workers" class="py-3">
+  <div class="container">
+    <div class="row text-xs-center">
+      {% for worker in workers %}
+      <div class="col-md py-1 wow fadeIn" data-wow-delay=".{{ loop.index0 }}s">
+        <p><img src="{{ worker.portrait|theme }}" alt="{{ worker.name }}" class="rounded-circle px-3"></p>
+        <h5 class="text-danger">{{ worker.name }}</h5>
+        <p class="text-muted">{{ worker.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

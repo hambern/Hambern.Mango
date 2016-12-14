@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5,
 
 .jumbotron {
   color: $body-bg;
-  @include gradient-directional($color5, $color4, 135deg);
+  @include gradient-directional($color4, $color2, 135deg);
   margin: 0;
   min-height: $section-big;
   &.small {
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5,
 
 .background-image {
   @include background-cover();
-  @include background-tint(.6);
+  @include background-tint();
   color: $body-bg;
   min-height: $section-big;
 }

@@ -1,0 +1,18 @@
+[staticPage]
+==
+<!doctype html>
+<html lang="sv">
+{% partial 'parts/head' %}
+<body>
+{% partial 'sections/navbar' %}
+{% partial 'sections/jumbotron' %}
+<div id="page" class="page">
+  <section class="py-3">
+    <div class="container">
+      {% component 'staticPage' %}
+    </div>
+  </section>
+</div>
+{% partial 'parts/foot' %}
+</body>
+</html>

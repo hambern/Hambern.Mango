@@ -1,0 +1,15 @@
+{
+  "name": "gumshoe",
+  "homepage": "https://github.com/cferdinandi/gumshoe",
+  "version": "3.3.1",
+  "_release": "3.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.3.1",
+    "commit": "27d34729115170b6707cbe8c54ca11968761e496"
+  },
+  "_source": "https://github.com/cferdinandi/gumshoe.git",
+  "_target": "^3.3.1",
+  "_originalSource": "gumshoe",
+  "_direct": true
+}

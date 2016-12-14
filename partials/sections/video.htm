@@ -11,7 +11,7 @@ function onStart() {
 <section id="{{ id|default('video') }}" class="py-3">
   <div class="container">
     {% if header %}
-    <h3 class="py-1">{{ header }}</h3>
+    <h3 class="py-1 text-danger">{{ header }}</h3>
     {% endif %}
     <div class="row">
       {% for i, code in videos %}

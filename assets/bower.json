@@ -23,6 +23,7 @@
     "wow": "^1",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10",
     "magnific-popup": "^1.1.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "gumshoe": "^3.3.1"
   }
 }

@@ -22,7 +22,7 @@
   @include prefix(word-break, normal);
 }
 
-@mixin background-tint($opacity: .5, $bg-from: $gray-dark, $bg-to: "", $direction: right bottom) {
+@mixin background-tint($opacity: .2, $bg-from: $gray-dark, $bg-to: "", $direction: right bottom) {
   position: relative;
   z-index: 0;
   &:after {
